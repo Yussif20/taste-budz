@@ -28,16 +28,17 @@ const ThemeSwitcher = () => {
     <div className="flex items-center justify-around h-8 w-14 bg-[#1F2937] dark:bg-[#111827] rounded-2xl">
       <button
         className={`${activeCircleStyles} ${
-          theme === 'light' ? 'bg-white' : ''
+          theme === 'light' ? 'bg-white' : 'bg-gray-800'
         }`}
         onClick={() => themeToggleHandler('light')}
       >
         <svg
           width="14"
-          className="fill-gray-800 dark:fill-gray-100"
+          className={`fill-gray-800 ${
+            theme === 'dark' ? 'dark:fill-gray-100' : ''
+          }`}
           height="13"
           viewBox="0 0 14 13"
-          fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
           <path d="M7.29396 10.5089C9.50822 10.5089 11.3032 8.71388 11.3032 6.49961C11.3032 4.28535 9.50822 2.49033 7.29396 2.49033C5.07969 2.49033 3.28467 4.28535 3.28467 6.49961C3.28467 8.71388 5.07969 10.5089 7.29396 10.5089Z" />
@@ -54,19 +55,19 @@ const ThemeSwitcher = () => {
 
       <button
         className={`${activeCircleStyles} ${
-          theme === 'dark' ? 'bg-[#f9fafb]' : ''
+          theme === 'dark' ? 'bg-[#f9fafb]' : 'bg-gray-800'
         }`}
         onClick={() => themeToggleHandler('dark')}
       >
         <svg
-          className="fill-white dark:fill-gray-900"
+          className={`fill-white ${
+            theme === 'dark' ? 'dark:fill-gray-100' : ''
+          }`}
           width="12"
           height="12"
           viewBox="0 0 12 12"
-          fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
-          {/* أيقونة القمر */}
           <path
             fillRule="evenodd"
             clipRule="evenodd"
