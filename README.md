@@ -1,36 +1,67 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+### **1. Primary Background & Header Colors**
 
-## Getting Started
+- **`mulberry-wood` (`#5f0f40`)**:
 
-First, run the development server:
+  - Use it as the background color for your navbar/header.
+  - Can also be a footer background to give a strong contrast.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+  ```html
+  <header class="bg-mulberry-wood text-white p-4">Food App</header>
+  ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **`blue-dianne` (`#0f4c5c`)**:
+  - Great for sidebar navigation or a section highlighting premium features.
+  - Can be used for CTA buttons if you want a different tone.
+  ```html
+  <aside class="bg-blue-dianne text-white p-4 w-1/4">Sidebar Content</aside>
+  ```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### **2. Accent Colors for CTAs & Buttons**
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **`carmine` (`#9a031e`)**:
 
-## Learn More
+  - Perfect for “Order Now” buttons or warning messages.
 
-To learn more about Next.js, take a look at the following resources:
+  ```html
+  <button class="bg-carmine text-white px-6 py-2 rounded-lg">Order Now</button>
+  ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **`gold-drop` (`#fb8b24`)**:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+  - Use it for discount banners or highlights on featured dishes.
 
-## Deploy on Vercel
+  ```html
+  <div class="bg-gold-drop text-black p-2 text-center">
+    🔥 Limited Offer! Get 20% Off
+  </div>
+  ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **`bamboo` (`#e36414`)**:
+  - Ideal for secondary buttons, category tags, or hovering effects.
+  ```html
+  <button class="bg-bamboo hover:bg-gold-drop text-white px-4 py-2 rounded">
+    Add to Cart
+  </button>
+  ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### **3. Gradients for Stylish Sections**
+
+- **Hero Section:**
+
+  - Use **`gradient-top`** or **`gradient-radial`** for an eye-catching hero section.
+
+  ```html
+  <section class="bg-gradient-top text-white p-10 text-center">
+    <h1 class="text-4xl font-bold">Welcome to Delicious Bites</h1>
+    <p>Explore mouthwatering recipes & fresh meals!</p>
+  </section>
+  ```
+
+- **Call to Action Section:**
+  - Use **`gradient-bottom-right`** for a modern look.
+  ```html
+  <div class="bg-gradient-bottom-right p-6 text-white text-center">
+    <h2 class="text-3xl">Join Our Food Lovers Community</h2>
+    <button class="bg-carmine px-4 py-2 rounded">Sign Up</button>
+  </div>
+  ```

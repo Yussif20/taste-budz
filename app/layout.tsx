@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import './globals.css';
+import MainHeader from '@/components/MainHeader';
 
 export const metadata: Metadata = {
   title: 'Taste Budz',
@@ -13,7 +14,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <MainHeader />
+        {children}
+      </body>
     </html>
   );
 }
+// <div className="bg-radial-gradient from-green-custom to-blue-custom h-screen w-full">
+//   {/* Your content here */}
+// </div>;
