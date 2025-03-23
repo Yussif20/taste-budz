@@ -1,3 +1,4 @@
+import ImageSlideshow from '@/components/ImagesSlideShow';
 import Link from 'next/link';
 
 export default function Home() {
@@ -6,7 +7,9 @@ export default function Home() {
       {/* Header Section */}
       <header className="flex flex-col gap-12 my-12 mx-auto w-[90%] max-w-[75rem]">
         {/* Slideshow */}
-        <div className="w-full bg-gray-700 rounded-lg"></div>
+        <div className="w-full h-[30rem] bg-gray-700 rounded-lg">
+          <ImageSlideshow />
+        </div>
 
         {/* Hero Section */}
         <div className="text-[#ddd6cb] text-2xl text-center">
