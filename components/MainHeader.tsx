@@ -1,13 +1,14 @@
 import React from 'react';
-// import ThemeSwitcher from './ThemeSwitcher';
-import Link from 'next/link';
+
 import LogoImg from '@/assets/logo.png';
 import Image from 'next/image';
+import Link from 'next/link';
+import NavLink from './NavLink';
 
 const MainHeader: React.FC = () => {
   return (
     <header
-      className=" h-72 bg-cover bg-center relative overflow-hidden"
+      className="h-72 bg-cover bg-center relative overflow-hidden"
       style={{ backgroundImage: "url('/wave.svg')" }}
     >
       <div className="w-4/6 mx-auto flex items-center justify-between py-12 px-10">
@@ -25,22 +26,12 @@ const MainHeader: React.FC = () => {
 
         {/* Navigation Links */}
         <nav className="z-10">
-          <ul className="flex items-center gap-8 ">
+          <ul className="flex items-center gap-8">
             <li>
-              <Link
-                href="/meals"
-                className="text-white hover:text-yellow-400 text-3xl font-semibold transition-colors duration-300"
-              >
-                Meals
-              </Link>
+              <NavLink link="Meals" href="/meals" />
             </li>
             <li>
-              <Link
-                href="/community"
-                className="text-white hover:text-yellow-400 text-3xl font-semibold transition-colors duration-300"
-              >
-                Community
-              </Link>
+              <NavLink link="Community" href="/community" />
             </li>
           </ul>
         </nav>

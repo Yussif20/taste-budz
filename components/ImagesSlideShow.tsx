@@ -29,26 +29,40 @@ export default function ImageSlideshow() {
       setCurrentImageIndex((prevIndex) =>
         prevIndex < images.length - 1 ? prevIndex + 1 : 0
       );
-    }, 5000);
+    }, 4000); // Reduced interval to 4 seconds for smoother feel
 
     return () => clearInterval(interval);
   }, []);
 
   return (
-    <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-[0_0_0.5rem_rgba(0,0,0,0.5)]">
+    <div className="relative w-[600px] h-[400px] mx-auto rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
       {images.map((image, index) => (
         <Image
           key={index}
           src={image.image}
           fill
-          className={` object-cover transition-all duration-500 ease-in-out ${
+          className={`object-cover transition-all duration-700 ease-in-out ${
             index === currentImageIndex
-              ? 'opacity-100 scale-100 translate-x-0 rotate-0 z-[1]'
-              : 'opacity-0 scale-110 -translate-x-4 -rotate-6 z-0'
+              ? 'opacity-100 scale-100'
+              : 'opacity-0 scale-105'
           }`}
           alt={image.alt}
+          quality={85} // Added quality prop for better optimization
+          priority={index === 0} // Preload first image
         />
       ))}
+      {/* Optional: Add navigation dots */}
+      <div className="absolute bottom-4 left-0 right-0 flex justify-center gap-2">
+        {images.map((_, index) => (
+          <button
+            key={index}
+            className={`w-2 h-2 rounded-full transition-all duration-300 ${
+              index === currentImageIndex ? 'bg-white scale-125' : 'bg-gray-400'
+            }`}
+            onClick={() => setCurrentImageIndex(index)}
+          />
+        ))}
+      </div>
     </div>
   );
 }
